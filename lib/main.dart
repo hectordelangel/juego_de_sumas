@@ -51,6 +51,7 @@ class _SumasState extends State<Sumas> {
       _iconWidgets.clear();
       _userInputController.text='';
       _counter=0;
+      _correctCounter=0;
     });
   }
 
@@ -77,6 +78,8 @@ class _SumasState extends State<Sumas> {
         _iconWidgets.clear();
         _counter=0;
         _sum();
+        _userInputController.text='';
+        _generateRandom();
       }
       else{
         _sum();
@@ -141,8 +144,8 @@ class _SumasState extends State<Sumas> {
                   },
                   decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(10)
-                ),
-                    )
+                    ),
+                  )
                 ),
               ),
             Padding(
